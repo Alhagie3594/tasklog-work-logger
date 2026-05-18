@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tasklog - Simple Work Logger for Developers</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
+        code { background: #f0f0f0; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; }
+        pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+        .download-btn { background: #2ea043; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; display: inline-block; margin: 0.5rem; }
+        .download-btn:hover { background: #2c974b; }
+        .feature { background: #f6f8fa; padding: 1rem; margin: 1rem 0; border-radius: 8px; }
+        .price { font-size: 2rem; font-weight: bold; color: #2ea043; }
+    </style>
+</head>
+<body>
+    <h1>📝 tasklog</h1>
+    <p><strong>Stop forgetting what you worked on. Log tasks from your terminal in 2 seconds.</strong></p>
+
+    <div class="feature">
+        <h2>🔥 The Problem</h2>
+        <p>Every day you spend 5-10 minutes trying to remember what you did for standups, timesheets, or weekly reports. <strong>tasklog</strong> solves this with instant logging.</p>
+    </div>
+
+    <div class="feature">
+        <h2>⚡ How It Works</h2>
+        <pre>
+$ tasklog add "Fixed login bug"
+✓ Task saved
+
+$ tasklog today
+Today's tasks:
+  • Fixed login bug
+  • Reviewed pull requests
+
+$ tasklog list
+All tasks:
+  [2026-05-19 14:30:15] Fixed login bug
+  [2026-05-19 09:15:00] Reviewed pull requests</pre>
+    </div>
+
+    <h2>📥 Download</h2>
+    <a href="https://github.com/Alhagie3594/tasklog-work-logger/releases/latest/download/tasklog-aarch64" class="download-btn">⬇️ Linux (aarch64)</a>
+    <a href="https://github.com/Alhagie3594/tasklog-work-logger/releases/latest/download/tasklog-x86_64" class="download-btn">⬇️ Linux (x86_64) - Bonus</a>
+
+    <div class="feature">
+        <h2>💰 Pricing</h2>
+        <p class="price">Free</p>
+        <p>Open source for individuals. <strong>$49/year</strong> for commercial teams includes priority support and analytics dashboard.</p>
+    </div>
+
+    <div class="feature">
+        <h2>🎯 Target Audience</h2>
+        <p>Developers, remote workers, freelancers, students, and anyone who fills timesheets.</p>
+    </div>
+
+    <h2>📦 Install</h2>
+    <pre>curl -L https://github.com/Alhagie3594/tasklog-work-logger/releases/latest/download/tasklog-aarch64 -o ~/.local/bin/tasklog && chmod +x ~/.local/bin/tasklog</pre>
+
+    <h2>🔗 Links</h2>
+    <p><a href="https://github.com/Alhagie3594/tasklog-work-logger">GitHub Repository</a></p>
+</body>
+</html>
