@@ -1,0 +1,36 @@
+name: Cross-compile for aarch64
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust target
+        run: rustup target add aarch64-unknown-linux-musl
+
+      - name: Install musl tools
+        run: sudo apt-get update && sudo apt-get install -y musl-tools
+
+      - name: Build for aarch64
+        run: cargo build --release --target aarch64-unknown-linux-musl
+
+      - name: Upload aarch64 binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasklog-aarch64
+          path: target/aarch64-unknown-linux-musl/release/tasklog
+
+      - name: Build for x86_64 (bonus)
+        run: cargo build --release --target x86_64-unknown-linux-musl
+
+      - name: Upload x86_64 binary (bonus)
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasklog-x86_64
+          path: target/x86_64-unknown-linux-musl/release/tasklog
